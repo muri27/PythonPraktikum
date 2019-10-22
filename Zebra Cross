@@ -1,0 +1,14 @@
+x = int(input())
+y = input()
+
+for i in range(x):
+    for j in range(x):
+        if y == "H" and i%2 == 0:
+            print("#", end="")
+        elif y == "H" and i%2 != 0:
+            print("-", end="")
+        if y == "V" and j%2 == 0:
+            print("#", end="")
+        elif y == "V" and j%2 != 0:
+            print("|", end="")
+    print()
