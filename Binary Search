@@ -1,0 +1,36 @@
+"""
+Binary Search = Mencari data yang urut
+Rata rata waktu pencarian 
+= 2logN+1
+= Prinsipnya cari nilai tengah dan diubah nilai tengahnya
+golongan o(2logN)
+"""
+#Contoh
+
+def BinarySearch (x, awal, akhir, A):
+    N = len(A)
+    ketemu = 0
+    for i in range (N):
+        Tengah = (awal+akhir+1)//2
+        if (x == A[Tengah]):
+            pos = Tengah
+            ketemu = True
+            break
+        elif x > A[Tengah]:
+            awal = Tengah + 1
+        elif x < A[Tengah]:
+            akhir = Tengah - 1
+        else:
+            ketemu = False
+    if (ketemu == True):
+        return pos
+    elif (ketemu == False):
+        return -1
+
+Data = [2,4,15,17,20,60,70]
+m = len(Data)
+cari = BinarySearch (17, 0, m, Data)
+if (cari == -1):
+    print("Data Tidak Ketemu")
+else:
+    print("Data ada di posisi : ", cari)
