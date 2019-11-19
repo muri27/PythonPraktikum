@@ -1,0 +1,28 @@
+"""
+Linear Search = Mencari data tidak urut
+Rata rata waktu pencarian 
+= (n/2(2+(n-1)))/2
+= 2+(n-1)/2
+golongan O(N)
+"""
+#Contoh
+def LinearSearch(x,A):
+    N = len(A)
+    for i in range(N):
+        if (A[i] == x):
+            pos = i
+            ketemu = True
+            break
+        else:
+            ketemu = False
+    if (ketemu == True):
+        return pos
+    else:
+        return -1
+
+Data = [70,15,20,60,2,4,17]
+cari = LinearSearch(17, Data)
+if (cari == -1):
+    print("Data Tidak Ketemu")
+else:
+    print("Data ada di Posisi : ", cari)
