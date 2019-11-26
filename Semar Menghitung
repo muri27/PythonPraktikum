@@ -1,0 +1,24 @@
+n = int(input())
+halaman = input().split()
+hal = list(halaman)
+
+for i in range(len(hal)):
+    hal[i] = int(hal[i])
+
+jml = 0
+hari = 0
+x = 0
+
+while jml < n:
+    x = x % 7
+    jml = jml + hal[x]
+    hari += 1
+    x += 1
+    if jml == n:
+        ketemu = True
+
+if hari > 7:
+    hari = hari % 7
+elif hari == 7:
+    hari = hari
+print(hari)
