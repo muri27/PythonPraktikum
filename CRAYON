@@ -1,0 +1,17 @@
+acara = input()
+singkatan = input()
+jumSama = 0
+cek = 0
+
+for i in range(len(singkatan)):
+    nemu = True
+    for j in range(cek, len(acara)):
+        if singkatan[i] == acara[j] and nemu:
+            nemu = False
+            jumSama += 1
+            cek = j+1
+        
+if jumSama == len(singkatan):
+    print("BISA")
+else:
+    print("TIDAK BISA")
