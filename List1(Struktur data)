@@ -1,0 +1,40 @@
+colors = ["red", "green", "blue", "yellow"]
+names = ["tatang", "dadang", "jajang"]
+
+#reversed nd sorted
+"""
+for i in range(len(colors)-1,-1,-1):
+    print(colors[i])
+print()
+
+for color in reversed(colors):
+    print(color)
+print()
+
+for color in reversed(sorted(colors)):
+    print(color)
+print()
+
+for i in reversed(range(len(colors))):
+    print(colors[i])
+   
+for i in range(len(colors)):
+    print(i, "-->", "\"" + colors[i] + "\"")
+"""
+
+#enumerate dan menggabungkan 2 list
+"""
+for i, color in enumerate(colors):
+    print(i , "-->", color)
+
+for nama, warna in zip(names, colors):
+    print(nama , "punya warna", warna)
+
+lebihpendek = min(len(names), len(colors))
+for i in range(lebihpendek):
+    print(names[i] , "warna", colors[i])
+"""
+colors.reverse()
+print(colors)
+colors.extend(names)
+print(colors)   
